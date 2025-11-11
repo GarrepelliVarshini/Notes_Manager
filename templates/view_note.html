@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}View Note{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='view_note.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="view-note-container">
+        <h2>{{ note.TITLE }}</h2>
+        <p>{{ note.CONTENT }}</p>
+        <a href="{{ url_for('view_notes') }}">Back to Notes</a>
+    </div>
+{% endblock %}
